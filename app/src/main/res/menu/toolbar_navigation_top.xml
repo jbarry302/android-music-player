@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            app:showAsAction="never"
+            android:id="@+id/home"
+            android:contentDescription="@string/content_description_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/home"
+            android:checked="true"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/inbox"
+                android:title="@string/inbox"
+                android:icon="@drawable/ic_baseline_inbox_24"/>
+            <item
+                android:id="@+id/chat"
+                android:title="@string/chat"
+                android:icon="@drawable/ic_baseline_chat_bubble_24"/>
+        </menu>
+    </item>
+
+    <item android:title="Misc">
+        <menu>
+            <item
+                android:id="@+id/credits"
+                android:title="@string/credits"
+                android:icon="@drawable/ic_baseline_thumb_up_24"/>
+            <item
+                android:id="@+id/logout"
+                android:title="@string/logout"
+                android:icon="@drawable/ic_baseline_logout_24"/>
+            <item
+                android:id="@+id/exit"
+                android:title="@string/exit"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"/>
+        </menu>
+    </item>
+</menu>
