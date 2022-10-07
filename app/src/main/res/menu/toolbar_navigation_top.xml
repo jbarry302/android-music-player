@@ -12,6 +12,20 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/home"
             android:checked="true"/>
+        <item
+            app:showAsAction="never"
+            android:id="@+id/my_music"
+            android:contentDescription="@string/content_description_my_music"
+            android:icon="@drawable/ic_baseline_library_music_24"
+            android:title="@string/my_music"
+            android:checked="true"/>
+        <item
+            app:showAsAction="never"
+            android:id="@+id/watch"
+            android:contentDescription="@string/content_description_watch"
+            android:icon="@drawable/ic_baseline_live_tv_24"
+            android:title="@string/watch"
+            android:checked="true"/>
     </group>
 
     <item android:title="Communicate">
@@ -29,6 +43,10 @@
 
     <item android:title="Misc">
         <menu>
+            <item
+                android:id="@+id/settings"
+                android:title="@string/settings"
+                android:icon="@drawable/ic_baseline_settings_24"/>
             <item
                 android:id="@+id/credits"
                 android:title="@string/credits"

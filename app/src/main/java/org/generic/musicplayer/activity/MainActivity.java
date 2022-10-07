@@ -19,6 +19,8 @@ import com.google.android.material.navigation.NavigationView;
 
 import org.generic.musicplayer.R;
 import org.generic.musicplayer.fragment.HomeFragment;
+import org.generic.musicplayer.fragment.MyMusicFragment;
+import org.generic.musicplayer.fragment.WatchFragment;
 import org.generic.musicplayer.utils.FragmentInitializer;
 import org.jetbrains.annotations.NotNull;
 
@@ -39,6 +41,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState == null) {
+            Bundle bundle = new Bundle();
+            bundle.putInt("test", 1);
+
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.container_view, HomeFragment.class, bundle)
+                    .commit();
+        }
         setContentView(R.layout.activity_main);
         context = MainActivity.this;
 
@@ -96,6 +107,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 initializer = initializer.getBuilder().setAddType(FragmentInitializer.TYPE_REPLACE).build();
                 setFragmentInitializer(initializer);
                 displayFragment(TAG, HomeFragment.TAG, R.string.home, HomeFragment.class);
+                break;
+            }
+            case R.id.my_music: {
+                displayFragment(TAG, MyMusicFragment.TAG, R.string.my_music, MyMusicFragment.class);
+                break;
+            }
+            case R.id.watch: {
+                displayFragment(TAG, WatchFragment.TAG, R.string.watch, WatchFragment.class);
                 break;
             }
             default: {

@@ -2,6 +2,8 @@
     <string name="app_name">Music Player</string>
     <!--    main app-->
     <string name="home">Home</string>
+    <string name="my_music">My Music</string>
+    <string name="watch">Watch</string>
     <string name="configuration">Configuration</string>
     <string name="settings">Settings</string>
     <string name="inbox">Inbox</string>
@@ -18,6 +20,8 @@
 
     <string name="content_description_settings">This is the settings of the app.</string>
     <string name="content_description_home">This is the home of the app.</string>
+    <string name="content_description_my_music">This is the my music of the app.</string>
+    <string name="content_description_watch">This is the watch of the app.</string>
     <string name="content_description_wallet">This is the wallet of the app.</string>
     <string name="content_description_favorite">This is the favorite of the app.</string>
     <string name="content_description_order">This is the order of the app.</string>
